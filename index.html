@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Інвестиції з нуля — безкоштовний гайд | Olga Dombrovska</title>
+<meta name="description" content="Безкоштовний PDF-гайд для новачків: особисті фінанси, складний відсоток, ETF, брокери, поповнення з України, ризики та податки. Без магії й без фінансової теорії заради теорії.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Інвестиції з нуля — безкоштовний гайд">
+<meta property="og:description" content="22 сторінки про те, як почати інвестувати й нарешті зрозуміти, що відбувається.">
+<meta property="og:image" content="og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6f2ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236f5a4c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23f6f2ea' text-anchor='middle'%3EІ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --paper:#fbf8f2; --card:#efe7dc; --card-2:#e7ddd0;
+    --ink:#2a2421; --text:#453c37; --muted:#7c7068; --line:#dfd4c6;
+    --accent:#6f5a4c; --accent-ink:#fbf8f2; --accent-hover:#5b4a3e;
+    --radius:18px; --maxw:1120px;
+    --serif:"Noto Serif",Georgia,"Times New Roman",serif;
+    --sans:"Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:24px}
+  h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:700;letter-spacing:-.01em;margin:0}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+  header.scrolled{border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--ink);text-decoration:none;display:flex;gap:10px;align-items:center}
+  .logo-mark{width:30px;height:30px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:16px}
+  .nav a.link{font-size:15px;font-weight:500;text-decoration:none;color:var(--text);padding:8px 14px;border-radius:999px;border:1px solid var(--line);transition:background .2s}
+  .nav a.link:hover{background:var(--card)}
+
+  /* buttons */
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--accent);transition:background .2s,transform .15s,box-shadow .2s;cursor:pointer}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 8px 22px -10px rgba(76,58,46,.55)}
+  .btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--accent)}
+  .btn-ghost:hover{background:var(--card)}
+  .btn:focus-visible,.cover-link:focus-visible,.nav a:focus-visible{outline:3px solid #b99a7e;outline-offset:3px}
+
+  /* hero */
+  .hero{padding-block:56px 40px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--card);padding:7px 14px;border-radius:999px;margin-bottom:22px}
+  .kicker i{width:7px;height:7px;border-radius:50%;background:#7fa37a;display:block}
+  .hero h1{font-size:clamp(44px,6.4vw,78px);line-height:1.02;margin-bottom:22px}
+  .hero h1 span{color:var(--accent)}
+  .lead{font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--text);max-width:34ch;margin:0 0 30px}
+  .hero-note{margin-top:18px;font-size:14px;color:var(--muted)}
+  .cover-col{display:flex;flex-direction:column;align-items:center}
+  .cover-link{position:relative;display:block;width:min(100%,380px);border-radius:10px;text-decoration:none;perspective:1200px}
+  .cover-link img{border-radius:6px 10px 10px 6px;box-shadow:0 1px 0 var(--line),0 30px 60px -28px rgba(60,44,34,.55),0 12px 24px -16px rgba(60,44,34,.35);transform:rotateY(-6deg) rotateX(2deg);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+  .cover-link::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;border-radius:6px 0 0 6px;background:linear-gradient(90deg,rgba(0,0,0,.10),transparent);z-index:1;pointer-events:none;transform:rotateY(-6deg) rotateX(2deg)}
+  .cover-link:hover img{transform:rotateY(0) rotateX(0) translateY(-4px)}
+  .cover-badge{position:absolute;right:-14px;top:22px;z-index:2;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;transform:rotate(4deg);box-shadow:0 8px 18px -8px rgba(0,0,0,.4)}
+  .cover-hint{margin-top:18px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .cover-hint svg{width:16px;height:16px}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);margin:24px 0 0}
+  .stat{padding:22px 20px;text-align:center}
+  .stat+.stat{border-left:1px solid var(--line)}
+  .stat b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--ink)}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  section{padding:88px 0 0}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .section-title{font-size:clamp(30px,4vw,44px);line-height:1.12;margin-bottom:16px}
+  .section-lead{font-size:18px;color:var(--text);max-width:60ch;margin:0}
+
+  /* author */
+  .author{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:start}
+  .author p{margin:0 0 16px}
+  .note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+  .note h3{font-size:19px;color:var(--accent);margin-bottom:6px}
+  .note p{margin:0;font-size:16px}
+  .note.dark{background:var(--card-2)}
+
+  /* toc */
+  .toc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;counter-reset:ch}
+  .ch{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .ch:hover{transform:translateY(-3px);border-color:#cdbca9;box-shadow:0 14px 30px -20px rgba(60,44,34,.35)}
+  .ch .num{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--accent);background:var(--card);border-radius:8px;display:inline-block;padding:3px 9px;margin-bottom:12px}
+  .ch h3{font-size:18px;line-height:1.3;margin-bottom:6px}
+  .ch p{margin:0;font-size:15px;line-height:1.5;color:var(--muted)}
+
+  /* compound */
+  .compound{background:var(--ink);color:#e9e1d6;border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+  .compound .eyebrow{color:#cdb49c}
+  .compound h2{color:#fbf8f2}
+  .compound p{color:#cfc4b7;margin:0 0 14px}
+  .compound small{color:#9d9186;font-size:13px}
+  .ctable{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  .ctable th,.ctable td{padding:13px 10px;text-align:right;border-bottom:1px solid rgba(255,255,255,.10);font-size:16px}
+  .ctable th{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#a99c8f}
+  .ctable th:first-child,.ctable td:first-child{text-align:left;color:#e9e1d6}
+  .ctable td{color:#fbf8f2}
+  .ctable tr:last-child td:last-child{color:#f2cf9f;font-weight:700}
+
+  /* final cta */
+  .final{text-align:center;padding-block:96px 88px}
+  .final .section-title{max-width:18ch;margin:0 auto 16px}
+  .final .section-lead{margin:0 auto 32px}
+  .final .btns{justify-content:center}
+  .ig{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1.5px solid var(--line);padding-bottom:3px}
+  .ig:hover{border-color:var(--accent)}
+  .ig svg{width:20px;height:20px}
+
+  footer{border-top:1px solid var(--line);padding:32px 0 40px;font-size:13.5px;color:var(--muted)}
+  footer p{margin:0 0 10px;max-width:90ch}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.cover-link img,.cover-link::before{transform:none}}
+
+  @media (max-width:960px){
+    .toc{grid-template-columns:repeat(2,1fr)}
+    .compound{grid-template-columns:1fr;padding:40px 32px}
+    .author{grid-template-columns:1fr;gap:12px}
+  }
+  @media (max-width:760px){
+    body{font-size:16px}
+    .wrap{padding-inline:16px}
+    .hero{padding-block:28px 24px}
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .lead{max-width:none}
+    .btns .btn{flex:1 1 100%}
+    .cover-link{width:min(78%,320px)}
+    .cover-badge{right:-10px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(3){border-left:0}
+    .stat:nth-child(n+3){border-top:1px solid var(--line)}
+    section{padding-top:64px}
+    .toc{grid-template-columns:1fr}
+    .compound{padding:32px 20px;border-radius:22px}
+    .ctable th,.ctable td{padding:11px 6px;font-size:14px}
+    .nav a.link span{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="logo-mark">О</span>in.progress.with.olga</a>
+    <a class="link" href="https://www.instagram.com/in.progress.with.olga/" target="_blank" rel="noopener">Instagram <span>→</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker"><i></i>Безкоштовний гайд · PDF</div>
+        <h1>Інвестиції<br><span>з нуля</span></h1>
+        <p class="lead">Без магії. Без «треба було починати у 20». І без фінансової теорії заради фінансової теорії.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="viewer.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>
+            Читати онлайн
+          </a>
+          <a class="btn btn-ghost" href="investytsii-z-nulia.pdf" download="Інвестиції з нуля — Olga Dombrovska.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Завантажити PDF
+          </a>
+        </div>
+        <p class="hero-note">Гайд для тих, хто хоче почати інвестувати і нарешті зрозуміти, що відбувається.</p>
+      </div>
+
+      <div class="cover-col">
+        <a class="cover-link" href="viewer.html" aria-label="Відкрити гайд «Інвестиції з нуля»">
+          <span class="cover-badge">Безкоштовно</span>
+          <img src="cover.jpg" width="875" height="1241" alt="Обкладинка гайду «Інвестиції з нуля», Olga Dombrovska">
+        </a>
+        <div class="cover-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 0 1 4 0v5"/><path d="M13 10V8a2 2 0 0 1 4 0v3"/><path d="M17 11a2 2 0 0 1 4 0v3a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3l-2.7-4.3a2 2 0 0 1 3.3-2.2L9 13"/></svg>
+          Натисніть на обкладинку, щоб відкрити
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>22</b><span>сторінки</span></div>
+      <div class="stat"><b>15</b><span>тем</span></div>
+      <div class="stat"><b>PDF</b><span>читати або завантажити</span></div>
+      <div class="stat"><b>0 ₴</b><span>безкоштовно</span></div>
+    </div>
+  </div>
+
+  <section class="wrap reveal" id="author">
+    <div class="author">
+      <div>
+        <div class="eyebrow">Про авторку</div>
+        <h2 class="section-title">Привіт. Я Ольга — і я теж не народилася з ETF у руках</h2>
+        <p>Я працюю в IT, маю дві вищі освіти, одна з них — магістр з банківської справи КНТЕУ. Але системно займатися власними інвестиціями почала у 38.</p>
+        <p>Зараз я поглиблюю знання з особистих фінансів та інвестицій і проходжу програму «Інвестиції та інвестиційний аналіз (корпоративні та особисті фінанси)» у процесі підготовки до сертифікації IAPBE за напрямом «Аналітик з інвестицій».</p>
+        <p>Мій принцип простий: спочатку розібратися, перевірити інформацію, а потім пояснити так, щоб після слова «ETF» не хотілося закрити вкладку.</p>
+      </div>
+      <div>
+        <div class="note">
+          <h3>Спойлер</h3>
+          <p>У 20 я не купила S&amp;P 500 на першу зарплату. І машину часу поки теж не знайшла.</p>
+        </div>
+        <div class="note dark">
+          <h3>Що це за гайд</h3>
+          <p>База для новачка. Не готовий портфель, не сигнал «купуй» і не обіцянка заробітку.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="contents">
+    <div class="reveal">
+      <div class="eyebrow">Зміст</div>
+      <h2 class="section-title">Що всередині</h2>
+      <p class="section-lead">Від «куди діваються гроші до кінця місяця» до чекліста перед першою покупкою.</p>
+    </div>
+    <div class="toc">
+      <article class="ch reveal"><span class="num">01</span><h3>Почнемо з твоїх грошей</h3><p>Доходи, витрати, резерв — і скільки реально лишається для інвестицій.</p></article>
+      <article class="ch reveal"><span class="num">02</span><h3>Навіщо інвестувати, якщо можна відкладати?</h3><p>Коли відкладати логічніше, а коли гроші просто лежать без руху.</p></article>
+      <article class="ch reveal"><span class="num">03</span><h3>Складний відсоток</h3><p>Що буде з €100, €300 і €500 на місяць через 10, 20 і 30 років.</p></article>
+      <article class="ch reveal"><span class="num">04</span><h3>У що взагалі можна вкладати</h3><p>Сім базових варіантів: від депозиту й облігацій до золота й крипти.</p></article>
+      <article class="ch reveal"><span class="num">05</span><h3>Акція, облігація, ETF</h3><p>Пояснення на прикладі beauty-бізнесу — без жодної формули.</p></article>
+      <article class="ch reveal"><span class="num">06</span><h3>ETF: що перевірити перед BUY</h3><p>Вісім пунктів: індекс, склад, TER, Acc/Dist, UCITS, валюта та інше.</p></article>
+      <article class="ch reveal"><span class="num">07</span><h3>Брокер: чекліст до реєстрації</h3><p>Хто відкриває рахунок, хто регулює, де зберігаються активи, скільки коштує.</p></article>
+      <article class="ch reveal"><span class="num">08</span><h3>IBKR чи Freedom24?</h3><p>Не батл «хто переміг», а різні потреби і що перевіряти в будь-якого брокера.</p></article>
+      <article class="ch reveal"><span class="num">09</span><h3>Як поповнити рахунок з України</h3><p>Брокер, банк і валютні правила НБУ — та повна ціна переказу.</p></article>
+      <article class="ch reveal"><span class="num">10</span><h3>Ризик і диверсифікація</h3><p>Чому «купила 10 тікерів» — ще не диверсифікація.</p></article>
+      <article class="ch reveal"><span class="num">11</span><h3>Як зібрати портфель</h3><p>П’ять питань до себе і розподіл грошей між активами.</p></article>
+      <article class="ch reveal"><span class="num">12</span><h3>«Можу інвестувати €500. Що далі?»</h3><p>Скільки коштує сама механіка: поповнення, валюта, угоди, виведення.</p></article>
+      <article class="ch reveal"><span class="num">13</span><h3>Податки коротко</h3><p>Базова логіка для податкового резидента України.</p></article>
+      <article class="ch reveal"><span class="num">14</span><h3>Чекліст: я готова натиснути BUY?</h3><p>11 пунктів на одній сторінці — пройдися перед першою покупкою.</p></article>
+      <article class="ch reveal"><span class="num">15</span><h3>І що тепер?</h3><p>Нормальний наступний крок — без паніки о 23:47.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap reveal">
+    <div class="compound">
+      <div>
+        <div class="eyebrow">Спойлер із розділу 03</div>
+        <h2 class="section-title">€500 на місяць × 30 років</h2>
+        <p>€180&nbsp;000 власних внесків. У математичному сценарії з умовними 7% середньорічного зростання кінцева сума виходить близько €610&nbsp;000.</p>
+        <p>А якщо починаєш у 38? У 48 тобі все одно буде 48. Питання лише, що ти зробиш за ці десять років.</p>
+        <small>Не прогноз і не гарантія — просто калькулятор. Без урахування податків, комісій та інфляції.</small>
+      </div>
+      <table class="ctable" aria-label="Приклад складного відсотка при 7% річних">
+        <thead><tr><th>Внесок</th><th>10 р.</th><th>20 р.</th><th>30 р.</th></tr></thead>
+        <tbody>
+          <tr><td>€100/міс</td><td>€17 308</td><td>€52 093</td><td>€121 997</td></tr>
+          <tr><td>€300/міс</td><td>€51 925</td><td>€156 278</td><td>€365 991</td></tr>
+          <tr><td>€500/міс</td><td>€86 542</td><td>€260 463</td><td>€609 985</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap final reveal" id="get">
+    <div class="eyebrow">Гайд уже чекає</div>
+    <h2 class="section-title">Почни з розуміння, а не з кнопки BUY</h2>
+    <p class="section-lead">Відкрий гайд прямо в браузері або збережи PDF собі — він безкоштовний.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="viewer.html">Читати онлайн</a>
+      <a class="btn btn-ghost" href="investytsii-z-nulia.pdf" download="Інвестиції з нуля — Olga Dombrovska.pdf">Завантажити PDF</a>
+    </div>
+    <div>
+      <a class="ig" href="https://www.instagram.com/in.progress.with.olga/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Більше про фінанси — в @in.progress.with.olga
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Матеріал створений у навчально-ознайомчих цілях і не є індивідуальною інвестиційною, фінансовою, юридичною чи податковою рекомендацією. Інвестування пов’язане з ризиком часткової або повної втрати капіталу. Минула дохідність не гарантує майбутніх результатів. Згадування Interactive Brokers, Freedom24 або окремих інструментів не є рекламою.</p>
+    <p>© 2026 Olga Dombrovska · @in.progress.with.olga</p>
+  </div>
+</footer>
+
+<script>
+  // тінь під шапкою при прокрутці
+  const hdr = document.querySelector('header');
+  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 8), {passive:true});
+  // плавна поява блоків
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {rootMargin:'0px 0px -8% 0px'}) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+</script>
+</body>
+</html>

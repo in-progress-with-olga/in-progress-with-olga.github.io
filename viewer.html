@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Читати гайд · Інвестиції з нуля</title>
+<meta name="description" content="Читайте гайд «Інвестиції з нуля» онлайн або завантажте PDF.">
+<meta name="theme-color" content="#2a2421">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236f5a4c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23f6f2ea' text-anchor='middle'%3EІ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{--bar:#2a2421;--bar-2:#3a322d;--text:#efe7dc;--muted:#a99c8f;--bg:#e9e2d7;--accent:#6f5a4c;--accent-2:#f2cf9f}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);font:400 15px/1.4 "Noto Sans",system-ui,sans-serif;color:#2a2421}
+  .bar{position:sticky;top:0;z-index:5;height:60px;background:var(--bar);color:var(--text);display:flex;align-items:center;gap:10px;padding:0 12px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  .bar a,.bar button{font:inherit;color:inherit}
+  .ibtn{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 10px;border-radius:10px;background:transparent;border:0;cursor:pointer;text-decoration:none;transition:background .2s}
+  .ibtn:hover{background:var(--bar-2)}
+  .ibtn:focus-visible,.dl:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+  .ibtn svg,.dl svg{width:20px;height:20px}
+  .title{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.2}
+  .title b{font-family:"Noto Serif",Georgia,serif;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .title span{font-size:12.5px;color:var(--muted)}
+  .zoom{display:flex;align-items:center;gap:2px;background:var(--bar-2);border-radius:12px;padding:2px}
+  .zoom output{min-width:48px;text-align:center;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .dl{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;background:var(--accent-2);color:#2a2421 !important;font-weight:600;text-decoration:none;white-space:nowrap}
+  .dl:hover{filter:brightness(1.05)}
+
+  #pages{padding:24px 12px 64px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+  #pages > *{margin-inline:auto}
+  .page{position:relative;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.08),0 10px 30px -12px rgba(60,44,34,.35);border-radius:4px;overflow:hidden}
+  .page canvas{display:block;width:100%;height:100%}
+  .page .ph{position:absolute;inset:0;display:grid;place-items:center;color:#b3a698;font-size:13px}
+
+  .state{max-width:520px;margin:18vh auto 0;text-align:center;padding:0 20px}
+  .spinner{width:36px;height:36px;border:3px solid #cdbfae;border-top-color:var(--accent);border-radius:50%;margin:0 auto 16px;animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .state a{color:var(--accent);font-weight:600}
+
+  .end{text-align:center;padding:8px 16px 40px;color:#6b5f56}
+  .end a{display:inline-flex;align-items:center;gap:8px;margin:6px;height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-weight:600;border:1.5px solid var(--accent);color:var(--accent)}
+  .end a.primary{background:var(--accent);color:#fbf8f2}
+
+  @media (max-width:640px){
+    .bar{gap:4px;padding:0 6px}
+    .zoom{display:none}
+    .title span{display:none}
+    .dl span{display:none}
+    .dl{padding:0 12px}
+    #pages{padding:12px 6px 48px;gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="ibtn" href="index.html" aria-label="Назад на головну" title="Назад">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </a>
+  <div class="title"><b>Інвестиції з нуля</b><span id="pageinfo">Olga Dombrovska</span></div>
+  <div class="zoom" aria-label="Масштаб">
+    <button class="ibtn" id="zout" aria-label="Зменшити">−</button>
+    <output id="zval">100%</output>
+    <button class="ibtn" id="zin" aria-label="Збільшити">+</button>
+  </div>
+  <a class="dl" href="investytsii-z-nulia.pdf" download="Інвестиції з нуля — Olga Dombrovska.pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+    <span>Завантажити</span>
+  </a>
+</div>
+
+<main id="pages">
+  <div class="state" id="state"><div class="spinner"></div>Відкриваю гайд…</div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  const PDF_URL = 'investytsii-z-nulia.pdf';
+  const pagesEl = document.getElementById('pages');
+  const stateEl = document.getElementById('state');
+  const info = document.getElementById('pageinfo');
+  const zval = document.getElementById('zval');
+
+  function fail(){
+    stateEl.innerHTML = 'Не вдалося показати гайд у цьому браузері.<br><br>' +
+      '<a href="' + PDF_URL + '" target="_blank" rel="noopener">Відкрити PDF напряму</a> або ' +
+      '<a href="' + PDF_URL + '" download>завантажити його</a>.';
+  }
+  if (!window.pdfjsLib) { fail(); return; }
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  let pdf, base = [], zoom = 1, slots = [];
+  const MAX_W = 860;
+
+  function cssWidth(){
+    const avail = pagesEl.clientWidth - (innerWidth <= 640 ? 12 : 24);
+    return Math.min(avail, MAX_W) * zoom;
+  }
+
+  async function renderPage(slot){
+    const w = cssWidth();
+    if (slot.renderedAt === w || slot.busy) return;
+    slot.busy = true;
+    try{
+      const page = await pdf.getPage(slot.n);
+      const vp1 = page.getViewport({scale:1});
+      const scale = w / vp1.width;
+      const dpr = Math.min(window.devicePixelRatio || 1, 3);
+      const vp = page.getViewport({scale: scale * dpr});
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.floor(vp.width); canvas.height = Math.floor(vp.height);
+      await page.render({canvasContext: canvas.getContext('2d'), viewport: vp}).promise;
+      slot.el.replaceChildren(canvas);
+      slot.renderedAt = w;
+    } finally { slot.busy = false; }
+  }
+
+  function layout(){
+    const w = cssWidth();
+    slots.forEach(s => {
+      s.el.style.width = w + 'px';
+      s.el.style.height = (w * base[s.n-1]) + 'px';
+      if (s.visible) renderPage(s);
+      else if (s.renderedAt && s.renderedAt !== w) { s.renderedAt = 0; }
+    });
+    zval.textContent = Math.round(zoom * 100) + '%';
+  }
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const s = slots[+e.target.dataset.i];
+      s.visible = e.isIntersecting;
+      if (s.visible) renderPage(s);
+    });
+  }, {rootMargin:'600px 0px'});
+
+  const pageIo = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) info.textContent = 'Сторінка ' + e.target.dataset.n + ' з ' + pdf.numPages; });
+  }, {rootMargin:'-45% 0px -45% 0px'});
+
+  pdfjsLib.getDocument(PDF_URL).promise.then(async doc => {
+    pdf = doc;
+    for (let i = 1; i <= pdf.numPages; i++){
+      const p = await pdf.getPage(i);
+      const v = p.getViewport({scale:1});
+      base.push(v.height / v.width);
+    }
+    stateEl.remove();
+    for (let i = 1; i <= pdf.numPages; i++){
+      const el = document.createElement('div');
+      el.className = 'page'; el.dataset.i = i-1; el.dataset.n = i;
+      el.innerHTML = '<div class="ph">' + i + '</div>';
+      pagesEl.appendChild(el);
+      slots.push({n:i, el, visible:false, renderedAt:0, busy:false});
+      io.observe(el); pageIo.observe(el);
+    }
+    const end = document.createElement('div');
+    end.className = 'end';
+    end.innerHTML = '<p>Кінець гайду. Дякую, що дочитала!</p>' +
+      '<a class="primary" href="' + PDF_URL + '" download="Інвестиції з нуля — Olga Dombrovska.pdf">Завантажити PDF</a>' +
+      '<a href="https://www.instagram.com/in.progress.with.olga/" target="_blank" rel="noopener">@in.progress.with.olga</a>';
+    pagesEl.after(end);
+    info.textContent = 'Сторінка 1 з ' + pdf.numPages;
+    layout();
+  }).catch(err => { console.error(err); fail(); });
+
+  let t;
+  addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
+  document.getElementById('zin').onclick = () => { zoom = Math.min(2, +(zoom + .25).toFixed(2)); layout(); };
+  document.getElementById('zout').onclick = () => { zoom = Math.max(.5, +(zoom - .25).toFixed(2)); layout(); };
+})();
+</script>
+</body>
+</html>
